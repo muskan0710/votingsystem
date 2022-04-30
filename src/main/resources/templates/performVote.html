@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Let's Vote!</title>
+</head>
+<body>
+Please click on the candidate name to vote:
+<div th:each="candidate : ${candidates}">
+    <a th:href="@{/voteFor(id=${candidate.id})}" th:text="${candidate.name}">Click</a>
+</div>
+</body>
+</html>
